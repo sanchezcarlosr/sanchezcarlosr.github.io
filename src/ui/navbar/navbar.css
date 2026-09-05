@@ -1,92 +1,94 @@
-.navbar-personality{
+.navbar-personality {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  position: fixed;
+  background: rgba(0, 0, 0, 0); /* color semitransparente */
+  backdrop-filter: blur(8px); /* difumina el fondo */
+  -webkit-backdrop-filter: blur(8px); /* soporte en Safari */
+  color: white;
+}
+.link-navbar {
+  display: none;
+}
+header {
+  width: 50%;
+}
+.button-container {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 5px;
+}
+.languaje-change {
+  display: none;
+}
+@media (min-width: 768px) {
+  .navbar-personality {
+    padding-left: 23px;
+  }
+  header {
+    width: 20%;
+  }
+  .languaje-change {
+    display: block;
+    font-size: 15px;
+    margin-left: 9px;
+  }
+  .button-container {
+    width: 50;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  .burgger-button {
+    display: none;
+  }
+  .navbar-personality {
+    justify-content: center;
+    gap: 15px;
+    padding-left: 0px;
+    box-sizing: border-box;
+  }
+  .link-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 26%;
+    box-sizing: border-box;
+  }
+  ul {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-.link-navbar{
-    display: none;
-}
-header{
-    width: 50%;
-}
-.button-container{
-    width: 40%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 5px;
-}
-.languaje-change{
-    display: none;
-}
-@media (min-width: 768px){
-    .navbar-personality{
-        padding-left: 23px;
-    }
-    header{
-        width: 20%;
-    }
-    .languaje-change{
-        display: block;
-        font-size: 15px;
-        margin-left: 9px;
-    }
-    .button-container{
-        width: 50;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 0;
+  }
+  li,
+  * {
+    text-decoration: none;
+    list-style: none;
+  }
+  li p {
+    border-bottom: 2px solid transparent;
+  }
 
-    }
+  .button-container {
+    justify-content: center;
+    gap: 12px;
+    width: 25%;
+    padding: 0px;
+  }
 }
-@media (min-width: 1024px) {
-    header{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 5px;
-    }
-    .burgger-button{
-        display: none;
-    }
-    .navbar-personality{
-        justify-content: center;
-        gap: 15px;
-        padding-left: 0px;
-        box-sizing: border-box;
-    }
-    .link-navbar{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 26%;
-        box-sizing: border-box;
-        
-    }
-    ul{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-        gap: 30px;
-        padding-left: 0;      
-    }
-    li, *{
-        text-decoration: none;
-        list-style: none;
-    }
-    li p {
-        border-bottom: 2px solid transparent;
-    }
-    
-    .button-container{
-        justify-content: center;
-        gap: 12px;
-        width: 25%;
-        padding: 0px;
-    }
-    
-}
-
-

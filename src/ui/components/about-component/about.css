@@ -8,13 +8,14 @@
   gap: 0px;
 }
 /* ================= gif ================= */
-.gif{
+.gif {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
-.gif img{
+.gif img {
   width: 20%;
 }
 /* ================= PRESENTACIÓN ================= */
@@ -28,7 +29,7 @@
   width: 100%;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -83,8 +84,9 @@ a{
 
 .summary h2,
 .bio h2,
-.web h2 {
-  text-decoration: underline #706c6c 0.3rem ;
+.web h2,
+.hobie h2{
+  text-decoration: underline #706c6c 0.3rem;
 }
 
 .summary-paragraph {
@@ -92,33 +94,50 @@ a{
   margin: 0 0 0 0;
 }
 /* ================= CV ================= */
-
-.cv-button {
-  display: block;
-
-  margin: 30px auto 0;
-
-  padding: 10px 25px;
-
-  font-size: 20px;
-
-  cursor: pointer;
+.container-cv {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-cv a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  gap: 0.2rem;
+  padding: 5px 10px;
+  background-color: #cc1e4a;
 }
 
 /* ================= BIO ================= */
 
 .bio-content {
-  display: grid;
-
-  grid-template-columns: 1fr 2fr;
-
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-.bio-year p:first-child {
-  font-weight: bold;
+.bio-summary {
+  display: flex;
+  gap: 30px;
+}
+.bio-year{
+  font-weight: 700;
+}
+.text-summary{
+  text-indent: 1rem;
 }
 
+.hobie div{
+  text-indent: 1rem;
+}
+.web-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
 /* ================= TABLET ================= */
 
 @media (min-width: 768px) {
