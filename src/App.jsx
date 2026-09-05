@@ -25,6 +25,7 @@ const darkTheme = createTheme({
       light: "#FFC906",
       contrastText: "#ffff",
     },
+
   },
 });
 /**
@@ -49,7 +50,7 @@ const lightTheme = createTheme({
 
 function App() {
   const [mode, setMode] = useState("light");
-
+  const year = new Date().getFullYear();
   const theme = mode === "dark" ? lightTheme : darkTheme;
 
   return (
@@ -63,6 +64,9 @@ function App() {
         </Route>
         <Route path="/proyects" exact />
       </Switch>
+      <footer>
+        © {year} Sanchez Carlos. All Rights Reserved.
+      </footer>
     </ThemeProvider>
   );
 }

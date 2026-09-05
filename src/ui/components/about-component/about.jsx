@@ -6,7 +6,10 @@ import sourceGift from "../../../assets/spiderman-3.gif";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
+import DescriptionIcon from "@mui/icons-material/Description";
 import { useTheme } from "@mui/material/styles";
 
 export default function About() {
@@ -15,12 +18,23 @@ export default function About() {
 
   return (
     <main className="about-container">
-      <section className="gif"><img src={sourceGift} alt="spider gift" /></section>
-      
+      <section className="gif">
+        <img src={sourceGift} alt="spider gift" />
+      </section>
+
       {/* ================= PRESENTACIÓN ================= */}
       <section className="presentation">
         <div className="presentation-info">
           <div className="social-icons">
+            <span>
+              <a
+                rel="noopener noreferrer"
+                href="https://github.com/sanchezcarlosr"
+                target="_blank"
+              >
+                <GitHubIcon />
+              </a>
+            </span>
             <span>
               <a
                 rel="noopener noreferrer"
@@ -38,15 +52,6 @@ export default function About() {
                 className="icon-link"
               >
                 <EmailIcon />
-              </a>
-            </span>
-            <span>
-              <a
-                rel="noopener noreferrer"
-                href="https://www.instagram.com/schz_carloss/"
-                target="_blank"
-              >
-                <InstagramIcon />
               </a>
             </span>
           </div>
@@ -72,13 +77,20 @@ export default function About() {
 
       {/* ================= RESUMEN ================= */}
       <section className="summary">
-        <h2>{t('summary')}</h2>
+        <h2>{t("summary")}</h2>
 
         <p className="summary-paragraph">{t("summary-primary")}</p>
 
         <p className="summary-paragraph">{t("summary-secundary")}</p>
-
-        <button className="cv-button">📄 CV</button>
+        <div className="container-cv">
+          <a
+            href="https://drive.google.com/file/d/1xLpdxEvVlj4Cgk4lUPmwKuJwnV854k4i/view?usp=sharing"
+            target="_blank"
+          >
+            <DescriptionIcon />
+            CV
+          </a>
+        </div>
       </section>
 
       {/* ================= BIO ================= */}
@@ -86,37 +98,74 @@ export default function About() {
         <h2>Bio</h2>
 
         <div className="bio-content">
-          <div className="bio-year">
-            <p>Año</p>
-            <p>2002</p>
-            <p>2021 - 2024</p>
-            <p>2025 - actualidad</p>
+          <div className="bio-summary">
+            <span
+              className="bio-year"
+              style={{ color: theme.palette.primary.main }}
+            >
+              2002
+            </span>
+            <span className="text-summary">
+              {t("birth")}
+            </span>
           </div>
-
-          <div className="bio-description">
-            <p>humanidad.push(new people(Carlos, Sanchez));</p>
-
-            <p>titulo = new Titulo(Analista Programador);</p>
-
-            <p>
-              titulo = new Titulo(Lic.);
-              <br />
-              titulo = new Titulo(Profesorado);
-            </p>
+          <div className="bio-summary">
+            <span
+              className="bio-year"
+              style={{ color: theme.palette.primary.main }}
+            >
+              2024
+            </span>
+            <span className="text-summary">
+              {t("degree")}
+            </span>
           </div>
+          <div className="bio-summary">
+            <span
+              className="bio-year"
+              style={{ color: theme.palette.primary.main }}
+            >
+              2025
+            </span>
+            <span className="text-summary">
+              {t("currently")}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section className="hobie">
+        <h2>{t("hobbies")}</h2>
+        <div>
+          <span className="hobie-summary">
+            {t("hobbiesText")}
+          </span>
         </div>
       </section>
 
       {/* ================= EN LA WEB ================= */}
       <section className="web">
-        <h2>En la web</h2>
+        <h2> {t("web")} </h2>
 
         <div className="web-links">
-          <p>GitHub</p>
-
-          <p>LinkedIn</p>
-
-          <p>Email</p>
+          <span className="link">
+            <a
+              rel="noopener noreferrer"
+              href="https://www.youtube.com/@CarlosSanchez-wr2qe/videos"
+              target="_blank"
+            >
+              <YouTubeIcon fontSize="large"/>
+            </a>
+          </span>
+          <span className="link">
+            <a
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/schz_carloss/"
+              target="_blank"
+            >
+              <InstagramIcon fontSize="large"/>
+            </a>
+          </span>
         </div>
       </section>
     </main>
